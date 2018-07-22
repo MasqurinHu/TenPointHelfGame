@@ -241,10 +241,19 @@ class TenPointHelfGameTests: XCTestCase {
     // 測試 檢查排是否十點半
     func test檢查是否十點半天胡1() {
         
-        let 派牌 = 1
-        let 現有: Float = 0.5
-        let 更新點數 = 遊戲規則.點數轉換(持有點數: 現有, 新得到點數: 派牌)
-        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 更新點數)
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 13) else {
+            XCTAssert(false)
+            return
+        }
+        guard let 算分 = 玩家Ａ.算分() else {
+            XCTAssert(false)
+            return
+        }
+        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 算分)
         
         XCTAssert(是十點半)
     }
