@@ -20,7 +20,10 @@ class GameModel {
         return Int(派牌)
     }
     
-    
+    //十點半有了 派牌 那就要檢查點數是否再次派牌
+    func 檢查點數是否超過十點半(持有點數: Int) -> Bool {
+        return false
+    }
     
     
     

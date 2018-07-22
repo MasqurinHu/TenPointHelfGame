@@ -51,6 +51,19 @@ class TenPointHelfGameTests: XCTestCase {
         // 非常好 測試有過 再把這次通過的改變 記錄到git上
     }
     
+    // 測試 檢查排是否超過十點半
+    func test檢查是否超過十點半() {
+        
+        let 派牌 = 遊戲規則.派牌()
+        let 檢查 = 遊戲規則.檢查點數是否超過十點半(持有點數: 派牌)
+        //發現 好像中文用注音輸入 沒有比較快～
+        XCTAssert(檢查)
+        // 當然檢查錯誤 一樣 在把這次檢查錯誤 用git儲存起來
+    }
+    
+    
+    
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
