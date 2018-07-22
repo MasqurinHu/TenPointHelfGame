@@ -34,11 +34,13 @@ struct 分數儲存 {
 
         var 總分: Float = 0
         for 分數 in 分數倉庫 where 分數 < J {
-            guard let 計算一般分數 = 計算一般分數(總分: 總分, 當前: 分數) else {
+            guard 計算一般分數(總分: 總分, 當前: 分數) != nil else {
                 return nil
             }
-            總分 += 計算一般分數
+            print("累計", 總分, "分數", 分數)
+            總分 += Float(分數)
         }
+        print("總分 階段一", 總分)
         for 分數 in 分數倉庫 where 分數 >= J {
             guard let 計算JQK分數 = 計算JQK分數(總分: 總分, 當前: 分數) else {
                 return nil
