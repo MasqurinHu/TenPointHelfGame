@@ -210,24 +210,39 @@ class TenPointHelfGameTests: XCTestCase {
         }
         XCTAssert(算分 == 12)
     }
-    
-    
-    //檢查更新點數
-//    func test更新點數1() {
-//
-//        guard 玩家Ａ.接收牌(派牌: 12) else {
-//            XCTAssert(false)
-//            return
-//        }
-//        let 更新點數 = 玩家Ａ.算分()
-//        XCTAssert(更新點數 == 0.5)
-//    }
-    func test更新點數2() {
-        let 更新點數 = 遊戲規則.點數轉換(持有點數: 4.5, 新得到點數: 13)
-        XCTAssert(更新點數 == 5)
+    func test累計算分數量超過() {
+        guard 玩家Ａ.接收牌(派牌: 13) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 3) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 7) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 3) else {
+            XCTAssert(true)
+            return
+        }
+        guard 玩家Ａ.算分() != nil else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(false)
     }
     
-    // 測試 檢查排是否超過十點半
+    // 測試 檢查排是否十點半
     func test檢查是否十點半天胡1() {
         
         let 派牌 = 1
