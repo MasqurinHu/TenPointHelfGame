@@ -337,10 +337,40 @@ class TenPointHelfGameTests: XCTestCase {
     }
     
     //十點半有第二個結束方法 過五關
-//    func test檢查過五關1() {
-//
-//        XCTAssert(false)
-//    }
+    func test檢查過五關1() {
+
+        guard 玩家Ａ.接收牌(派牌: 2) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 3) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 2) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        guard let 算分 = 玩家Ａ.算分().分數 else {
+            XCTAssert(false)
+            return
+        }
+        let 不是十點半 = !遊戲規則.檢查點數是否十點半(持有點數: 算分)
+        guard 不是十點半 else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(遊戲規則.檢查是否過五關(關數: 玩家Ａ.算分().幾張))
+        
+    }
     
 //    func test檢查過五關失敗() {
 //

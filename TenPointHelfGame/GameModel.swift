@@ -162,6 +162,13 @@ class GameModel {
         }
     }
     
+    func 檢查是否過五關(關數: Int) -> Bool {
+        guard 關數 == 5 else {
+            return false
+        }
+        return true
+    }
+    
     func 檢查點數是否超過十點半(持有點數: Float) -> Bool {
         
         if 持有點數 > 10.5 {
