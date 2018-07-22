@@ -68,6 +68,14 @@ class GameModel {
         }
     }
     
+    func 檢查點數是否超過十點半(持有點數: Float) -> Bool {
+        
+        if 持有點數 > 10.5 {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     

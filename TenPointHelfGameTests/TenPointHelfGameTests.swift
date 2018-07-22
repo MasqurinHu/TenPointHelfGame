@@ -86,6 +86,28 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(是十點半)
     }
     
+    //十點半有第二個結束方法 過五關
+    func test檢查過五關1() {
+        
+        let 派牌1 = 1
+        var 更新點數 = 遊戲規則.點數轉換(持有點數: 0, 新得到點數: 派牌1)
+        let 派牌2 = 2
+        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌2)
+        let 派牌3 = 1
+        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌3)
+        let 派牌4 = 12
+        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌4)
+        let 派牌5 = 13
+        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌5)
+        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 更新點數)
+        if 是十點半 {
+            XCTAssert(false)
+        }
+        //需要檢查是否超過十點半
+        let 是否超過10點半 = 遊戲規則.檢查點數是否超過十點半(持有點數: 更新點數)
+        XCTAssert(是否超過10點半)
+    }
+    
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
