@@ -126,6 +126,21 @@ class TenPointHelfGameTests: XCTestCase {
         }
         XCTAssert(玩家Ａ.算分() == 10)
     }
+    func test累計算分1() {
+        guard 玩家Ａ.接收牌(派牌: 13) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 5) else {
+            XCTAssert(false)
+            return
+        }
+        guard let 算分 = 玩家Ａ.算分() else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(算分 == 5.5)
+    }
     
     
     //檢查更新點數
