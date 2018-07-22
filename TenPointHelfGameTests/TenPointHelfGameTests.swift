@@ -43,6 +43,9 @@ class TenPointHelfGameTests: XCTestCase {
         default:
             是否在範圍內 = false
         }
+        
+        print("test派牌")
+        print("取得牌", 取得牌)
         XCTAssert(是否在範圍內)
     }
     
@@ -71,6 +74,17 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(是十點半)
     }
     
+    func test檢查是否十點半天胡3() {
+        
+        let 派牌 = 10
+        let 現有: Float = 0.5
+        let 更新點數 = 遊戲規則.點數轉換(持有點數: 現有, 新得到點數: 派牌)
+        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 更新點數)
+        
+        print("test檢查是否十點半天胡3")
+        print("派牌 = ",派牌 ,"\n現有 = ", 現有 ,"\n 更新點數 = ", 更新點數 )
+        XCTAssert(是十點半)
+    }
     
     
     func testPerformanceExample() {
