@@ -61,7 +61,7 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(玩家Ａ.計算一般分數(總分: -1, 當前: 5) == nil)
     }
     func test計算一般分數錯誤累積分數2() {
-        XCTAssert(玩家Ａ.計算一般分數(總分: 11, 當前: 5) == nil)
+        XCTAssert(玩家Ａ.計算一般分數(總分: 21, 當前: 5) == nil)
     }
     func test計算一般分數錯誤牌卡1() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 10, 當前: -1) == nil)
@@ -79,7 +79,7 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(玩家Ａ.計算JQK分數(總分: -1, 當前: 13) == nil)
     }
     func test計算JQK分數錯誤總分2() {
-        XCTAssert(玩家Ａ.計算JQK分數(總分: 11, 當前: 13) == nil)
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 21, 當前: 13) == nil)
     }
     func test計算JQK分數錯誤卡牌1() {
         XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 10) == nil)
@@ -182,6 +182,33 @@ class TenPointHelfGameTests: XCTestCase {
             return
         }
         XCTAssert(算分 == 9)
+    }
+    func test累計算分4() {
+        guard 玩家Ａ.接收牌(派牌: 13) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 3) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 7) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        guard let 算分 = 玩家Ａ.算分() else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(算分 == 12)
     }
     
     

@@ -37,10 +37,8 @@ struct 分數儲存 {
             guard 計算一般分數(總分: 總分, 當前: 分數) != nil else {
                 return nil
             }
-            print("累計", 總分, "分數", 分數)
             總分 += Float(分數)
         }
-        print("總分 階段一", 總分)
         for 分數 in 分數倉庫 where 分數 >= J {
             guard let 計算JQK分數 = 計算JQK分數(總分: 總分, 當前: 分數) else {
                 return nil
@@ -123,7 +121,7 @@ struct 分數儲存 {
         return true
     }
     func 檢查總分(_ 總分: Float) -> Bool {
-        guard 總分 >= 0, 總分 <= 10.5 else {
+        guard 總分 >= 0, 總分 <= 20 else {
             print("總分 不在範圍內", 總分)
             return false
         }
