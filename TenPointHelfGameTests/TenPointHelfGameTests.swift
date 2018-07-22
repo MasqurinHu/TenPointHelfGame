@@ -12,11 +12,13 @@ import XCTest
 class TenPointHelfGameTests: XCTestCase {
     
     let 遊戲規則 = GameModel()
+    //加入玩家局數概念
+    var 玩家Ａ = 分數儲存()
     
     override func setUp() {
         super.setUp()
         
-        
+        玩家Ａ.重開新局()
     }
     
     override func tearDown() {
@@ -48,8 +50,13 @@ class TenPointHelfGameTests: XCTestCase {
     
     //檢查更新點數
     func test更新點數1() {
-        let 更新點數 = 遊戲規則.點數轉換(持有點數: 4, 新得到點數: 12)
-        XCTAssert(更新點數 == 4.5)
+        
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        let 更新點數 = 玩家Ａ.算分()
+        XCTAssert(更新點數 == 0.5)
     }
     func test更新點數2() {
         let 更新點數 = 遊戲規則.點數轉換(持有點數: 4.5, 新得到點數: 13)

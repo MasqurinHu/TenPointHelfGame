@@ -8,6 +8,34 @@
 
 import Foundation
 
+struct 分數儲存 {
+    
+    private var 分數倉庫 = [Int]()
+    
+    mutating func 重開新局() {
+        分數倉庫.removeAll()
+    }
+    
+    mutating func 接收牌(派牌: Int) -> Bool {
+        guard 分數倉庫.count <= 5 else {
+            print("超過五張牌 需要結算了")
+            return false
+        }
+        分數倉庫.append(派牌)
+        return true
+    }
+    
+    func 算分() -> Float {
+//        for 分數 in 分數倉庫 where 分數 > 1 && 分數 < 11 {
+//
+//        }
+        return 0
+    }
+    
+    
+}
+
+
 class GameModel {
     
     //首先 10點半 需要莊家 玩家 派牌 計分 牌發完
