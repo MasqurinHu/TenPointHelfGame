@@ -49,6 +49,16 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(是否在範圍內)
     }
     
+    //檢查更新點數
+    func test更新點數1() {
+        let 更新點數 = 遊戲規則.點數轉換(持有點數: 4, 新得到點數: 12)
+        XCTAssert(更新點數 == 4.5)
+    }
+    func test更新點數2() {
+        let 更新點數 = 遊戲規則.點數轉換(持有點數: 4.5, 新得到點數: 13)
+        XCTAssert(更新點數 == 5)
+    }
+    
     // 測試 檢查排是否超過十點半
     func test檢查是否十點半天胡1() {
         
@@ -103,8 +113,12 @@ class TenPointHelfGameTests: XCTestCase {
         if 是十點半 {
             XCTAssert(false)
         }
+        
+        //點數轉換測試強度不足 這邊出錯了
         //需要檢查是否超過十點半
         let 是否超過10點半 = 遊戲規則.檢查點數是否超過十點半(持有點數: 更新點數)
+        print("test檢查過五關1")
+        print("派牌1 ", 派牌1," 派牌2 ", 派牌2, " 派牌3 ", 派牌3, " 派牌4 ", 派牌4, " 派牌5 ", 派牌5, "\n更新點數", 更新點數)
         XCTAssert(是否超過10點半)
     }
     
