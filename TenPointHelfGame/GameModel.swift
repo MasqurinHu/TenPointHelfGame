@@ -22,7 +22,7 @@ struct 分數儲存 {
     }
     
     mutating func 接收牌(派牌: Int) -> Bool {
-        guard 分數倉庫.count <= 5 else {
+        guard 分數倉庫.count < 5 else {
             print("超過五張牌 需要結算了")
             return false
         }

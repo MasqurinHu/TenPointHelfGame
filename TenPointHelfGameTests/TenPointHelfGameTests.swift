@@ -235,10 +235,6 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(true)
             return
         }
-        guard 玩家Ａ.算分() != nil else {
-            XCTAssert(false)
-            return
-        }
         XCTAssert(false)
     }
     
