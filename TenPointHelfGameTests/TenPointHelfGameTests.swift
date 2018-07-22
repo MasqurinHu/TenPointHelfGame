@@ -48,31 +48,46 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(是否在範圍內)
     }
     //檢查玩家分數
-    func test檢查玩家分數開始() {
+    func test計算一般分數1() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 0, 當前: 5) == 5)
     }
-    func test檢查玩家分數錯誤累積分數1() {
-        XCTAssert(玩家Ａ.計算一般分數(總分: -1, 當前: 5) == nil)
-    }
-    func test檢查玩家分數錯誤累積分數2() {
-        XCTAssert(玩家Ａ.計算一般分數(總分: 11, 當前: 5) == nil)
-    }
-    func test檢查玩家分數中場1() {
+    func test計算一般分數2() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 10, 當前: 5) == 15)
     }
-    func test檢查玩家分數中場2() {
-        XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 11) == 10.5)
-    }
-    func test檢查玩家分數中場3() {
-        print("test檢查玩家分數中場3")
+    func test計算一般分數3() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 0.5, 當前: 1) == 1.5)
     }
-    func test檢查玩家分數中場錯誤牌卡1() {
+    func test計算一般分數錯誤累積分數1() {
+        XCTAssert(玩家Ａ.計算一般分數(總分: -1, 當前: 5) == nil)
+    }
+    func test計算一般分數錯誤累積分數2() {
+        XCTAssert(玩家Ａ.計算一般分數(總分: 11, 當前: 5) == nil)
+    }
+    func test計算一般分數錯誤牌卡1() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 10, 當前: -1) == nil)
     }
-    func test檢查玩家分數中場錯誤牌卡2() {
+    func test計算一般分數錯誤牌卡2() {
         XCTAssert(玩家Ａ.計算一般分數(總分: 10, 當前: 14) == nil)
     }
+    func test計算JQK分數1() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 0, 當前: 11) == 0.5)
+    }
+    func test計算JQK分數2() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 12) == 10.5)
+    }
+    func test計算JQK分數錯誤總分1() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: -1, 當前: 13) == nil)
+    }
+    func test計算JQK分數錯誤總分2() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 11, 當前: 13) == nil)
+    }
+    func test計算JQK分數錯誤卡牌1() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 10) == nil)
+    }
+    func test計算JQK分數錯誤卡牌2() {
+        XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 14) == nil)
+    }
+    
     
     //檢查更新點數
 //    func test更新點數1() {
