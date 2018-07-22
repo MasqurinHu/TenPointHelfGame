@@ -88,6 +88,45 @@ class TenPointHelfGameTests: XCTestCase {
         XCTAssert(玩家Ａ.計算JQK分數(總分: 10, 當前: 14) == nil)
     }
     
+    // 測試算分
+    func test算分1() {
+        guard 玩家Ａ.接收牌(派牌: 10) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(玩家Ａ.算分() == 10)
+    }
+    
+    func test算分2() {
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(玩家Ａ.算分() == 10)
+    }
+    
+    func test算分3() {
+        guard 玩家Ａ.接收牌(派牌: 11) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(玩家Ａ.算分() == 10)
+    }
+    func test算分4() {
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(玩家Ａ.算分() == 10)
+    }
+    func test算分5() {
+        guard 玩家Ａ.接收牌(派牌: 13) else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(玩家Ａ.算分() == 10)
+    }
+    
     
     //檢查更新點數
 //    func test更新點數1() {
