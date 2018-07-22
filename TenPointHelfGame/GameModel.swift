@@ -20,6 +20,12 @@ class GameModel {
         return Int(派牌)
     }
     
+    //我們缺少了點數轉換的方法 就做一個吧
+    func 點數轉換(持有點數: Int, 新得到點數: Int) -> Float {
+        return 0
+    }
+    
+    
     //十點半有了 派牌 那就要檢查點數是否再次派牌
     func 檢查點數是否超過十點半(持有點數: Float) -> Bool {
         
