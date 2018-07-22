@@ -55,6 +55,10 @@ class TenPointHelfGameTests: XCTestCase {
     func test檢查是否超過十點半() {
         
         let 派牌 = 遊戲規則.派牌()
+        
+        //發現問題 撲克牌發牌 一定是整數 可是檢查要小數點所以 把發現問題 用git記住
+        
+        
         let 檢查 = 遊戲規則.檢查點數是否超過十點半(持有點數: 派牌)
         //發現 好像中文用注音輸入 沒有比較快～
         XCTAssert(檢查)

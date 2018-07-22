@@ -21,8 +21,17 @@ class GameModel {
     }
     
     //十點半有了 派牌 那就要檢查點數是否再次派牌
-    func 檢查點數是否超過十點半(持有點數: Int) -> Bool {
-        return false
+    func 檢查點數是否超過十點半(持有點數: Float) -> Bool {
+        
+        //因為完全沒有判斷輸入值 所以現在判斷一下
+        //忽然發現一個盲點 十點半 有小數點 我輸入是用整數
+        //所以需要調整
+        
+        if 持有點數 > 10.5 {
+            return true
+        } else {
+            return false
+        }
     }
     
     
