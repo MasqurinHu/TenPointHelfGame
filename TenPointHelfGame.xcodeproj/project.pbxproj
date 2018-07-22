@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4539354421041DBE009E46E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539354321041DBE009E46E0 /* AppDelegate.swift */; };
+		4539354621041DBE009E46E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539354521041DBE009E46E0 /* ViewController.swift */; };
+		4539354921041DBE009E46E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4539354721041DBE009E46E0 /* Main.storyboard */; };
+		4539354B21041DBF009E46E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4539354A21041DBF009E46E0 /* Assets.xcassets */; };
+		4539354E21041DBF009E46E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4539354C21041DBF009E46E0 /* LaunchScreen.storyboard */; };
+		4539355921041DBF009E46E0 /* TenPointHelfGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4539355821041DBF009E46E0 /* TenPointHelfGameTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4539355521041DBF009E46E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4539353821041DBE009E46E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4539353F21041DBE009E46E0;
+			remoteInfo = TenPointHelfGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4539354021041DBE009E46E0 /* TenPointHelfGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TenPointHelfGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4539354321041DBE009E46E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4539354521041DBE009E46E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4539354821041DBE009E46E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4539354A21041DBF009E46E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4539354D21041DBF009E46E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4539354F21041DBF009E46E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4539355421041DBF009E46E0 /* TenPointHelfGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TenPointHelfGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4539355821041DBF009E46E0 /* TenPointHelfGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenPointHelfGameTests.swift; sourceTree = "<group>"; };
+		4539355A21041DBF009E46E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4539353D21041DBE009E46E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4539355121041DBF009E46E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4539353721041DBE009E46E0 = {
+			isa = PBXGroup;
+			children = (
+				4539354221041DBE009E46E0 /* TenPointHelfGame */,
+				4539355721041DBF009E46E0 /* TenPointHelfGameTests */,
+				4539354121041DBE009E46E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4539354121041DBE009E46E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4539354021041DBE009E46E0 /* TenPointHelfGame.app */,
+				4539355421041DBF009E46E0 /* TenPointHelfGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4539354221041DBE009E46E0 /* TenPointHelfGame */ = {
+			isa = PBXGroup;
+			children = (
+				4539354321041DBE009E46E0 /* AppDelegate.swift */,
+				4539354521041DBE009E46E0 /* ViewController.swift */,
+				4539354721041DBE009E46E0 /* Main.storyboard */,
+				4539354A21041DBF009E46E0 /* Assets.xcassets */,
+				4539354C21041DBF009E46E0 /* LaunchScreen.storyboard */,
+				4539354F21041DBF009E46E0 /* Info.plist */,
+			);
+			path = TenPointHelfGame;
+			sourceTree = "<group>";
+		};
+		4539355721041DBF009E46E0 /* TenPointHelfGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				4539355821041DBF009E46E0 /* TenPointHelfGameTests.swift */,
+				4539355A21041DBF009E46E0 /* Info.plist */,
+			);
+			path = TenPointHelfGameTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4539353F21041DBE009E46E0 /* TenPointHelfGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4539355D21041DBF009E46E0 /* Build configuration list for PBXNativeTarget "TenPointHelfGame" */;
+			buildPhases = (
+				4539353C21041DBE009E46E0 /* Sources */,
+				4539353D21041DBE009E46E0 /* Frameworks */,
+				4539353E21041DBE009E46E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TenPointHelfGame;
+			productName = TenPointHelfGame;
+			productReference = 4539354021041DBE009E46E0 /* TenPointHelfGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4539355321041DBF009E46E0 /* TenPointHelfGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4539356021041DBF009E46E0 /* Build configuration list for PBXNativeTarget "TenPointHelfGameTests" */;
+			buildPhases = (
+				4539355021041DBF009E46E0 /* Sources */,
+				4539355121041DBF009E46E0 /* Frameworks */,
+				4539355221041DBF009E46E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4539355621041DBF009E46E0 /* PBXTargetDependency */,
+			);
+			name = TenPointHelfGameTests;
+			productName = TenPointHelfGameTests;
+			productReference = 4539355421041DBF009E46E0 /* TenPointHelfGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4539353821041DBE009E46E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = TenPointHelfGame;
+				TargetAttributes = {
+					4539353F21041DBE009E46E0 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4539355321041DBF009E46E0 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 4539353F21041DBE009E46E0;
+					};
+				};
+			};
+			buildConfigurationList = 4539353B21041DBE009E46E0 /* Build configuration list for PBXProject "TenPointHelfGame" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4539353721041DBE009E46E0;
+			productRefGroup = 4539354121041DBE009E46E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4539353F21041DBE009E46E0 /* TenPointHelfGame */,
+				4539355321041DBF009E46E0 /* TenPointHelfGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4539353E21041DBE009E46E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4539354E21041DBF009E46E0 /* LaunchScreen.storyboard in Resources */,
+				4539354B21041DBF009E46E0 /* Assets.xcassets in Resources */,
+				4539354921041DBE009E46E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4539355221041DBF009E46E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4539353C21041DBE009E46E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4539354621041DBE009E46E0 /* ViewController.swift in Sources */,
+				4539354421041DBE009E46E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4539355021041DBF009E46E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4539355921041DBF009E46E0 /* TenPointHelfGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4539355621041DBF009E46E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4539353F21041DBE009E46E0 /* TenPointHelfGame */;
+			targetProxy = 4539355521041DBF009E46E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4539354721041DBE009E46E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4539354821041DBE009E46E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4539354C21041DBF009E46E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4539354D21041DBF009E46E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4539355B21041DBF009E46E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4539355C21041DBF009E46E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4539355E21041DBF009E46E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J46ZPGV247;
+				INFOPLIST_FILE = TenPointHelfGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Masqurin.TenPointHelfGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4539355F21041DBF009E46E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J46ZPGV247;
+				INFOPLIST_FILE = TenPointHelfGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Masqurin.TenPointHelfGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4539356121041DBF009E46E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J46ZPGV247;
+				INFOPLIST_FILE = TenPointHelfGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Masqurin.TenPointHelfGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TenPointHelfGame.app/TenPointHelfGame";
+			};
+			name = Debug;
+		};
+		4539356221041DBF009E46E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J46ZPGV247;
+				INFOPLIST_FILE = TenPointHelfGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Masqurin.TenPointHelfGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TenPointHelfGame.app/TenPointHelfGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4539353B21041DBE009E46E0 /* Build configuration list for PBXProject "TenPointHelfGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4539355B21041DBF009E46E0 /* Debug */,
+				4539355C21041DBF009E46E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4539355D21041DBF009E46E0 /* Build configuration list for PBXNativeTarget "TenPointHelfGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4539355E21041DBF009E46E0 /* Debug */,
+				4539355F21041DBF009E46E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4539356021041DBF009E46E0 /* Build configuration list for PBXNativeTarget "TenPointHelfGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4539356121041DBF009E46E0 /* Debug */,
+				4539356221041DBF009E46E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4539353821041DBE009E46E0 /* Project object */;
+}
