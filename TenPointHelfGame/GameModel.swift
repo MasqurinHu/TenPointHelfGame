@@ -14,7 +14,10 @@ class GameModel {
     //先做一個方法 派牌
     
     func 派牌() -> Int {
-        return 0
+        // 撲克牌 要派排的範圍在 1~13 所以 修改一下程式碼
+        
+        let 派牌 = arc4random_uniform(13)
+        return Int(派牌)
     }
     
     

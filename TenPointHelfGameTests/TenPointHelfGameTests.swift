@@ -47,8 +47,8 @@ class TenPointHelfGameTests: XCTestCase {
             是否在範圍內 = false
         }
         XCTAssert(是否在範圍內)
-        // 開始第一次測試
-        // 應為我派牌 一定是0 不在我設定的範圍內 所以測試失敗 就先用版本控制 git 記住這次錯誤的測試
+        //第二次測試 不知道會不會通過測試
+        // 非常好 測試有過 再把這次通過的改變 記錄到git上
     }
     
     func testPerformanceExample() {
