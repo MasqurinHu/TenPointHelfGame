@@ -253,6 +253,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
+        print("算分",算分)
         let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 算分)
         
         XCTAssert(是十點半)

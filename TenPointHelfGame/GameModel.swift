@@ -70,7 +70,7 @@ struct 分數儲存 {
         return 總分
     }
     func 是否重新計算JQK(_ 總分: Float) -> Bool {
-        guard let 重新計算JQK = 重新計算JQK(總分), 重新計算JQK < 10.5 else {
+        guard let 重新計算JQK = 重新計算JQK(總分), 重新計算JQK <= 10.5 else {
             return false
         }
         return true
@@ -83,7 +83,7 @@ struct 分數儲存 {
     }
     
     func 是否重新計算A(_ 總分: Float) -> Bool {
-        guard let 重新計算A = 重新計算A(總分), 重新計算A < 10.5 else {
+        guard let 重新計算A = 重新計算A(總分), 重新計算A <= 10.5 else {
             return false
         }
         return true
