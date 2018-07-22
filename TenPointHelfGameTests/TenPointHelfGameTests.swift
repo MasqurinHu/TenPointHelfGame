@@ -406,39 +406,36 @@ class TenPointHelfGameTests: XCTestCase {
         
     }
     
-//    func test檢查過五關失敗() {
-//
-//        let 派牌1 = 1
-//        var 更新點數 = 遊戲規則.點數轉換(持有點數: 0, 新得到點數: 派牌1)
-//        print("更新點數", 更新點數)
-//        let 派牌2 = 2
-//        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌2)
-//        print("更新點數", 更新點數)
-//        let 派牌3 = 3
-//        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌3)
-//        print("更新點數", 更新點數)
-//        let 派牌4 = 4
-//        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌4)
-//        print("更新點數", 更新點數)
-//        let 派牌5 = 5
-//        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌5)
-//        print("更新點數", 更新點數)
-//        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 更新點數)
-//        if 是十點半 {
-//            XCTAssert(false)
-//        }
-//        //需要檢查是否超過十點半
-//        let 是否超過10點半 = 遊戲規則.檢查點數是否超過十點半(持有點數: 更新點數)
-//        print("test檢查過五關失敗")
-//        print("派牌1 ", 派牌1," 派牌2 ", 派牌2, " 派牌3 ", 派牌3, " 派牌4 ", 派牌4, " 派牌5 ", 派牌5, "\n更新點數", 更新點數)
-//
-//        //看來測試又寫錯了
-//        //更新點數需要加入局數的概念 測試及方法需要重寫
-//
-//        XCTAssert(!是否超過10點半)
-//    }
-    
-    
+    func test檢查過五關失敗1() {
+        
+        guard 玩家Ａ.接收牌(派牌: 2) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 1) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 7) else {
+            XCTAssert(false)
+            return
+        }
+        guard 玩家Ａ.接收牌(派牌: 12) else {
+            XCTAssert(false)
+            return
+        }
+        guard let 算分 = 玩家Ａ.算分().分數 else {
+            XCTAssert(false)
+            return
+        }
+        let 十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 算分)
+        guard 十點半 else {
+            XCTAssert(false)
+            return
+        }
+        XCTAssert(!遊戲規則.檢查是否過五關(關數: 玩家Ａ.算分().幾張))
+        
+    }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
