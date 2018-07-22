@@ -121,7 +121,7 @@ struct 分數儲存 {
         return true
     }
     func 檢查總分(_ 總分: Float) -> Bool {
-        guard 總分 >= 0, 總分 <= 40 else {
+        guard 總分 >= 0, 總分 <= 10.5 else {
             print("總分 不在範圍內", 總分)
             return false
         }
