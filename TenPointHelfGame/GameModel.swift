@@ -26,9 +26,11 @@ struct 分數儲存 {
     }
     
     func 算分() -> Float {
-//        for 分數 in 分數倉庫 where 分數 > 1 && 分數 < 11 {
-//
-//        }
+
+        var 總分: Float = 0
+        for 分數 in 分數倉庫 {
+            總分 += Float(分數)
+        }
         return 0
     }
     
