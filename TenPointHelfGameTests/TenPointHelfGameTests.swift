@@ -47,6 +47,12 @@ class TenPointHelfGameTests: XCTestCase {
         }
         XCTAssert(是否在範圍內)
     }
+    //檢查玩家分數
+    func test檢查玩家分數() {
+        XCTAssert(玩家Ａ.計算一般分數(總分: 0, 當前: 5) == 5)
+    }
+    
+    
     
     //檢查更新點數
     func test更新點數1() {

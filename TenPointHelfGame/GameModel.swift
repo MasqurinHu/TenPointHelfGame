@@ -25,13 +25,57 @@ struct 分數儲存 {
         return true
     }
     
-    func 算分() -> Float {
+    func 算分() -> Float? {
 
         var 總分: Float = 0
-        for 分數 in 分數倉庫 {
-            總分 += Float(分數)
+        for 分數 in 分數倉庫 where 分數 < 11 {
+            guard let 計算一般分數 = 計算一般分數(總分: 總分, 當前: 分數) else {
+                return nil
+            }
+            總分 += 計算一般分數
         }
-        return 0
+        for 分數 in 分數倉庫 where 分數 > 10 {
+            guard let 計算JQK分數 = 計算JQK分數(總分: 總分, 當前: 分數) else {
+                return nil
+            }
+            總分 = 計算JQK分數
+        }
+        return 總分
+    }
+    func 計算一般分數(總分: Float, 當前 分數: Int) -> Float? {
+        guard 檢查一般(分數), 檢查總分(總分) else {
+            return nil
+        }
+        return 總分 + Float(分數)
+    }
+    func 計算JQK分數(總分: Float, 當前 分數: Int) -> Float? {
+        guard 檢查JQK(分數), 檢查總分(總分) else {
+            return nil
+        }
+        return 總分 + 0.5
+    }
+    func 檢查一般(_ 分數: Int) -> Bool {
+        guard 分數 > 0, 分數 < 11 else {
+            print("一般分數不在範圍內", 分數)
+            return false
+        }
+        return true
+    }
+    func 檢查總分(_ 總分: Float) -> Bool {
+        guard 總分 > 0, 總分 < 40 else {
+            print("總分 不在範圍內", 總分)
+            return false
+        }
+        return true
+    }
+    func 檢查JQK(_ 分數: Int) -> Bool {
+        switch 分數 {
+        case 11 ... 13:
+            return true
+        default:
+            print("JQK不在範圍內", 分數)
+            return false
+        }
     }
     
     
