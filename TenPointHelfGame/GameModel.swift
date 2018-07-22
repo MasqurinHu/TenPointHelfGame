@@ -30,28 +30,28 @@ struct 分數儲存 {
         return true
     }
     
-    func 算分() -> Float? {
+    func 算分() -> (分數: Float?, 幾張: Int) {
 
         var 總分: Float = 0
         for 分數 in 分數倉庫 where 分數 < J {
             guard 計算一般分數(總分: 總分, 當前: 分數) != nil else {
-                return nil
+                return (nil, 分數倉庫.count)
             }
             總分 += Float(分數)
         }
         for 分數 in 分數倉庫 where 分數 >= J {
             guard let 計算JQK分數 = 計算JQK分數(總分: 總分, 當前: 分數) else {
-                return nil
+                return (nil, 分數倉庫.count)
             }
             總分 = 計算JQK分數
         }
         guard 是否重新計算分數(總分) else {
-            return 總分
+            return (總分, 分數倉庫.count)
         }
         for 分數 in 分數倉庫 where 分數 == A {
             guard 是否重新計算A(總分) else { break }
             guard let 重新計算A = 重新計算A(總分) else {
-                return nil
+                return (nil, 分數倉庫.count)
             }
             總分 = 重新計算A
         }
@@ -60,14 +60,14 @@ struct 分數儲存 {
             case J ... K:
                 guard 是否重新計算JQK(總分) else { break }
                 guard let 重新計算JQK = 重新計算JQK(總分) else {
-                    return nil
+                    return (nil, 分數倉庫.count)
                 }
                 總分 = 重新計算JQK
             default:
                 break
             }
         }
-        return 總分
+        return (總分, 分數倉庫.count)
     }
     func 是否重新計算JQK(_ 總分: Float) -> Bool {
         guard let 重新計算JQK = 重新計算JQK(總分), 重新計算JQK <= 10.5 else {
@@ -151,45 +151,6 @@ class GameModel {
         
         let 派牌 = arc4random_uniform(12) + 1
         return Int(派牌)
-    }
-    
-    //我們缺少了點數轉換的方法 就做一個吧
-    func 點數轉換(持有點數: Float, 新得到點數: Int) -> Float {
-        
-        //十點半的點數轉換
-        //恩 1,可以當1,10
-        //11,12,13 可以當10, 0.5
-        
-        //糟糕 卡住了 思考一下
-        let 新點數: Int
-        switch 新得到點數 {
-        case 11, 12, 13:
-            新點數 = 10
-        default:
-            新點數 = 新得到點數
-        }
-        // 計算總和是否超過10.5 再決定11, 12, 13是多少點
-        let 總和 = 持有點數 + Float(新點數)
-        
-        let 轉換後點數: Float
-        if 總和 > 10.5 {
-            switch 新得到點數 {
-            case 1:
-                轉換後點數 = 持有點數 + 1
-            case 11 ... 13:
-                轉換後點數 = 持有點數 + 0.5
-            default:
-                轉換後點數 = 持有點數 + Float(新得到點數)
-            }
-        } else {
-            switch 新得到點數 {
-            case 1, 11, 12, 13:
-                轉換後點數 = 持有點數 + 10
-            default:
-                轉換後點數 = 持有點數 + Float(新得到點數)
-            }
-        }
-        return 轉換後點數
     }
     
     func 檢查點數是否十點半(持有點數: Float) -> Bool {

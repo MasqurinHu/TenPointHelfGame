@@ -94,7 +94,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        XCTAssert(玩家Ａ.算分() == 10)
+        XCTAssert(玩家Ａ.算分().分數 == 10)
     }
     
     func test算分2() {
@@ -102,7 +102,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        XCTAssert(玩家Ａ.算分() == 10)
+        XCTAssert(玩家Ａ.算分().分數 == 10)
     }
     
     func test算分3() {
@@ -110,21 +110,21 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        XCTAssert(玩家Ａ.算分() == 10)
+        XCTAssert(玩家Ａ.算分().分數 == 10)
     }
     func test算分4() {
         guard 玩家Ａ.接收牌(派牌: 12) else {
             XCTAssert(false)
             return
         }
-        XCTAssert(玩家Ａ.算分() == 10)
+        XCTAssert(玩家Ａ.算分().分數 == 10)
     }
     func test算分5() {
         guard 玩家Ａ.接收牌(派牌: 13) else {
             XCTAssert(false)
             return
         }
-        XCTAssert(玩家Ａ.算分() == 10)
+        XCTAssert(玩家Ａ.算分().分數 == 10)
     }
     func test累計算分1() {
         guard 玩家Ａ.接收牌(派牌: 13) else {
@@ -135,7 +135,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -154,7 +154,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -177,7 +177,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -204,7 +204,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -249,7 +249,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -268,7 +268,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -287,7 +287,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -305,7 +305,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -327,7 +327,7 @@ class TenPointHelfGameTests: XCTestCase {
             XCTAssert(false)
             return
         }
-        guard let 算分 = 玩家Ａ.算分() else {
+        guard let 算分 = 玩家Ａ.算分().分數 else {
             XCTAssert(false)
             return
         }
@@ -337,35 +337,10 @@ class TenPointHelfGameTests: XCTestCase {
     }
     
     //十點半有第二個結束方法 過五關
-    func test檢查過五關1() {
-        //print("test檢查過五關1")
-        let 派牌1 = 1
-        var 更新點數 = 遊戲規則.點數轉換(持有點數: 0, 新得到點數: 派牌1)
-        //print("更新點數", 更新點數)
-        let 派牌2 = 2
-        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌2)
-        //print("更新點數", 更新點數)
-        let 派牌3 = 1
-        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌3)
-        //print("更新點數", 更新點數)
-        let 派牌4 = 12
-        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌4)
-        //print("更新點數", 更新點數)
-        let 派牌5 = 13
-        更新點數 = 遊戲規則.點數轉換(持有點數: 更新點數, 新得到點數: 派牌5)
-        //print("更新點數", 更新點數)
-        let 是十點半 = 遊戲規則.檢查點數是否十點半(持有點數: 更新點數)
-        if 是十點半 {
-            XCTAssert(false)
-        }
-        
-        //點數轉換測試強度不足 這邊出錯了
-        //需要檢查是否超過十點半
-        let 是否超過10點半 = 遊戲規則.檢查點數是否超過十點半(持有點數: 更新點數)
-        
-        //print("派牌1 ", 派牌1," 派牌2 ", 派牌2, " 派牌3 ", 派牌3, " 派牌4 ", 派牌4, " 派牌5 ", 派牌5, "\n更新點數", 更新點數)
-        XCTAssert(是否超過10點半)
-    }
+//    func test檢查過五關1() {
+//
+//        XCTAssert(false)
+//    }
     
 //    func test檢查過五關失敗() {
 //
